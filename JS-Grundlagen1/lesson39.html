@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+/* Schreibe eine Funktion, die eine URL als Parameter erhält und einen HTML-Link zurückgibt.
+*/
+
+        function createHtmlLink(url) {
+            return `<a href="${url}">${url}</a>`;
+        }
+
+        // Beispielaufruf
+        let htmlLink = createHtmlLink('http://1006.org');
+        console.log(htmlLink); // <a href="http://1006.org">http://1006.org</a>
+
+
+
+    </script>
+
+</body>
+</html>

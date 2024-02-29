@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+/* Überarbeite Reichweite & Verbrauch, Teil 2 (Übung 18). Erstelle passende Funktionen, die die Benutzereingaben zurückgeben.
+ */
+
+        // Funktion zur Berechnung des Verbrauchs
+        function berechneVerbrauch(gesamtVerbrauch, strecke) {
+            return Math.round(gesamtVerbrauch / strecke * 100);
+        }
+
+        // Funktion zur Berechnung der Reichweite
+        function berechneReichweite(tankVolumen, Verbrauch) {
+            return Math.round(tankVolumen * 100 / Verbrauch);
+        }
+
+        // Benutzereingaben
+        let strecke = prompt('Wieviele Kilometer hast du zurückgelegt?');
+        let gesamtVerbrauch = prompt('Wieviel Benzin hast du verbraucht?');
+
+        // Verwendung der Funktion berechneVerbrauch
+        let Verbrauch = berechneVerbrauch(gesamtVerbrauch, strecke);
+        console.log(`Dein Auto verbraucht ${Verbrauch} Liter auf 100 Kilometer.`);
+
+        let tankVolumen = prompt('Wieviele Liter Benzin passen insgesamt in den Tank deines Fahrzeugs?');
+
+        // Verwendung der Funktion berechneReichweite
+        let Reichweite = berechneReichweite(tankVolumen, Verbrauch);
+        console.log(`Du kannst insgesamt ${Reichweite} km mit einer Tankfüllung fahren.`);
+
+
+
+    </script>
+
+</body>
+</html>

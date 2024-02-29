@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+/* Programmiere eine Funktion, die den Versand (hier wieder simuliert durch Konsolenausgabe) des Newsletters übernimmt. Dabei soll statt Heribert ein beliebiger Name verwendbar sein.
+​*/
+
+        function showNewsletterFor(name) {
+            console.log(`Hello, Mr. ${name},
+            
+        We're happy to inform you that you've just won $100,000! Congratulations! Please write us an email with your banking information and we will transfer the money.
+
+        Sincerely, the Win Team`);
+        }
+
+        // Aufrufe der Funktion mit unterschiedlichen Namen
+        showNewsletterFor('Heribert');
+        showNewsletterFor('Goldy');
+        showNewsletterFor('Ladislaus');
+
+
+/*-------------
+Studien haben ergeben, dass die Öffnungsrate höher ist, wenn der Newsletter die richtige Anrede (d. h. Ms. oder Mr.) verwendet. Übergib der Funktion einen zweiten Parameter mit korrekter Anrede, die du dann in der ersten Zeile des Newsletters verwendest.
+
+Einen zweiten Parameter kannst du bei der Funktionsdefinition innerhalb der Klammern durch Komma getrennt angeben.
+
+Es sind auch weitere Parameter möglich, aber hier benötigst du nur zwei. Innerhalb des Rumpfes kannst du den neuen Parameter wie gewohnt wie ein Variable verwenden.
+*/
+
+
+        let showNewsletterFor = (recipient, salutation) => {
+            console.log(`Hello, ${salutation} ${recipient},
+            
+        We're happy to inform you that you've just won $100,000! Congratulations! Please write us an email with your banking information and we will transfer the money.
+
+        Sincerely, the Win Team`);
+        };
+
+        showNewsletterFor('Heribert', 'Mr.');
+        showNewsletterFor('Goldy', 'Ms.');
+        showNewsletterFor('Ladislaus', 'Mr.');
+
+
+
+
+
+/* -------------
+Locke mit individuelleren Gewinnen, die du nach Geschlecht unterscheidest. Dafür entwickelst du einen Newsletter, der die folgenden Texte enthält:
+
+Männliche Version
+Weibliche Version
+*/
+
+        let showNewsletterFor = (recipient, salutation, gender) => {
+            let prizeMessage = "";
+
+            if (gender === 'male') {
+                prizeMessage = `We are glad to inform you that you won an incredible Ferrari and $20,000!`;
+            } else if (gender === 'female') {
+                prizeMessage = `We are glad to inform you that you have won a voucher from Tiffany & Co. ($50,000), a luxury trip to New York and additionally $50,000 for shopping and more!`;
+            }
+
+            console.log(`Hello, ${salutation} ${recipient},
+            
+        ${prizeMessage}
+
+        Sincerely, the Win Team`);
+        };
+
+        showNewsletterFor('Heribert', 'Mr.', 'male');
+        showNewsletterFor('Goldy', 'Ms.', 'female');
+        showNewsletterFor('Ladislaus', 'Mr.', 'male');
+
+
+    </script>
+
+</body>
+</html>

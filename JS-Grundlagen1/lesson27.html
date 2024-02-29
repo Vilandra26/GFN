@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+/* Björns neue Anforderung stellt nun auch kein Problem mehr dar! Folgender Datensatz liegt dir vor:
+
+Zerlege den Namen in Vor- und Nachnamen.
+Entferne die überflüssigen Leerzeichen. */
+
+
+
+        let name = 'Heribert  Gold '
+        name = name.trim(name)
+        let spacePosition = name.lastIndexOf(' ')
+        let firstName = name.substr(0, spacePosition)
+        firstName = firstName.trim(firstName)
+        let lastName = name.substr(spacePosition + 1)
+        lastName = lastName.trim(lastName)
+
+        console.log(firstName)
+        console.log(lastName)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

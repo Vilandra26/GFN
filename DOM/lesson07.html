@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1>Überschrift</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ut error veritatis labore hic laboriosam incidunt? Eum qui tenetur ab nostrum, iusto a consequuntur incidunt numquam ducimus doloremque, rem ipsam.</p>
+
+    <script>
+        'use strict'
+/* Frage nicht nach dem Sinn, aber es besteht der Wunsch, den Text teilweise in grauer Schriftfarbe darzustellen.
+
+Schreibe eine Funktion, die allen p-Elementen die CSS-Klasse gray zuordnet. */
+
+        const $ = q => document.querySelector(q);
+        const $$ = q => document.querySelectorAll(q);
+
+
+/* Eine Ausnahme soll nur der Fließtext darstellen, der den Kaufvorgang enthält. Die p-Elemente mit der Klasse buy_info_text sollen dementsprechend von dem Vorgang ausgeschlossen werden. */
+
+        const pElements = $$('p');
+        const buyInfoText = $('.buy_info_text');
+
+        pElements.forEach(p => {
+            if (p !== buyInfoText) {
+                p.classList.add('gray');
+            }
+        });
+
+/* Weise nun allen Listenpunkten, die noch keine andere Klasse haben, die Klasse gray zu. */
+
+        const liElements = $$('li');
+
+        liElements.forEach(li => {
+            if (li.className === '') {
+                li.classList.add('gray');
+            }
+        });
+        
+    </script>
+</body>
+</html>

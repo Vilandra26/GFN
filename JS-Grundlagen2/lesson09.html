@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        
+/* Na, haben wir den Mathematiker in dir geweckt? Verwende die Funktion digitSum aus der letzten Übung. Nutze die Funktion dieses Mal, um gleich ein ganzes Array von Zahlen nach ihrer Quersumme zu sortieren.
+ */
+
+        function digitSum(number) {
+            return number.toString().split('').map(Number).reduce((sum, digit) => sum + digit, 0);
+        }
+
+        let byDigitSum = (a, b) => {
+            return digitSum(a) - digitSum(b);
+        };
+
+        let numbers = [99, 5, 8, 12, 111, 123];
+
+        numbers.sort(byDigitSum);
+
+        console.log(numbers); // => [ 12, 111, 5, 123, 8, 99 ]
+
+
+</script>
+</body>
+</html>

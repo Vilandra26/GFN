@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+/* Schreibe eine Funktion digitSum, die die Quersumme einer übergebenen Zahl zurückgibt. Hinweis: Die Quersumme ist die Summe aller Ziffern einer Zahl.
+Tipp: Verwende split('').
+*/
+
+        function digitSum(number) {
+            return number.toString().split('').map(Number).reduce((sum, digit) => sum + digit, 0);
+        }
+
+        console.log(digitSum(123)); // 6  (1 + 2 + 3)
+        console.log(digitSum(456)); // 15  (4 + 5 + 6)
+
+    </script>
+</body>
+</html>

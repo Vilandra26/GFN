@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        
+/* Passe die Funktion transformName aus der letzten Class so an, dass sie beliebig viele Vornamen (als Array) verwerten kann. Hier noch einmal der Code jener Funktion:
+ */
+
+        const transformName = (firstNames, lastName) => {
+            const initials = firstNames.map(name => name.charAt(0)).join('. ') + '.';
+            return `${initials} ${lastName}`;
+        };
+
+        console.log(transformName(['Ladislaus', 'Coolio', 'Barry'], 'Jones'));
+
+    </script>
+</body>
+</html>

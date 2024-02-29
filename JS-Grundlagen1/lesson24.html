@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+/* Nimm Angaben zu Vorname, Nachname, Geschlecht und Alter eines Anwenders entgegen und speichere diese in Variablen.
+
+Diese Eingaben sollst du nun folgendermaßen validieren:
+
+Vorname und Nachname müssen zwischen 2 und 100 Zeichen lang sein.
+
+Die Eingabe für das Geschlecht muss m (male) oder ein f (female) sein.
+
+Das Alter muss eine Zahl unter 150 sein. */
+
+
+        let firstName = prompt('Wie lautet dein Vorname?')
+        let lastName = prompt('Wie lautet dein Nachname?')
+        let gender = prompt('Identifizierst du als männlich (m), weiblich (w) oder divers (d)?')
+        let age = prompt('Wie alt bist du?')
+
+        let errorMessage = ''
+
+        if (lastName.length < 2 || lastName.length > 100) {
+            errorMessage += 'Nachname '
+        }
+
+        if (firstName.length < 2 || firstName.length > 100) {
+            errorMessage += 'Vorname '
+        }
+
+        if (gender !== 'w' && gender !== 'm' && gender !== 'd') {
+            errorMessage += 'Geschlecht '
+        }
+
+        if (isNaN(age) || age >= 150) {
+            errorMessage += 'Alter '
+        }
+
+        if (errorMessage === '') {
+            console.log('OK!')
+            alert('OK!')
+        } else {
+            console.log(`Achtung! Die folgenden Eingaben enthalten Fehler: ${errorMessage}`)
+            alert(`Achtung! Die folgenden Eingaben enthalten Fehler: ${errorMessage}`)
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

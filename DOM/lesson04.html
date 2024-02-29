@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        /*  Stelle dir vor, du hast die fertige Website einer Immobilienfirma in der »Schublade«. Nun hast du einen neuen Kunden — eine Anwaltskanzlei — und findest, dass sich das Layout der Website der Makler auch perfekt für die Anwälte eignen würde. Natürlich kannst du dem neuen Kunden den »neuen« Entwurf nicht mit den Texten der Makler vorstellen. Damit du nicht mühevoll mit Copy-and-paste hantieren musst, schreibst du Code, der die vorhandenen Texte gegen Blind-Texte austauscht. Du kannst dafür einen der berüchtigten Lorem-Ipsum-Generatoren (oder natürlich das geniale Bacon Ipsum bzw. Veggie Ipsum — je nach persönlichem Geschmack) verwenden.
+        
+        1. Schreibe eine Funktion, die den Inhalt aller h1-Tags austauscht. */
+        function changeH1Content() {
+            let h1 = document.querySelector('h1');
+            h1.textContent = 'Lorem Ipsum';
+        }
+        
+        // 2. Schreibe eine weitere Funktion, um den Inhalt der p-Tags auszutauschen.
+
+        function changePTagsContent() {
+            let pTags = document.querySelectorAll('p');
+            pTags.forEach(pTag => {
+                pTag.textContent = 'Lorem Ipsum';
+            });
+        }
+
+        // 3. Auch die Navigationspunkte sollen ausgetauscht werden. 
+        function changeNavContent() {
+            let nav = document.querySelector('nav');
+            nav.innerHTML = '<ul>' +
+                '<li><a href="#">Lorem Ipsum</a></li>' +
+                '<li><a href="#">Lorem Ipsum</a></li>' +
+                '<li><a href="#">Lorem Ipsum</a></li>' +
+                '<li><a href="#">Lorem Ipsum</a></li>' +
+                '</ul>';
+            }
+        
+    </script>
+</body>
+</html>

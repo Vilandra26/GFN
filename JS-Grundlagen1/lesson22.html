@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+/* Vielleicht gehörst du zu den Menschen, die »die Sache mit dem Schaltjahr« spannend finden. Und falls du es nicht spannend findest, schreibe trotzdem ein Programm, das berechnet, ob es sich bei einem Jahr um ein Schaltjahr handelt.
+
+Frage den Anwender nach dem gewünschten Jahr und speicher die Eingabe in einer Variable.
+
+Falls das betreffende Jahr ein Schaltjahr ist, soll die Konsole z. B. den Satz »0000 ist ein Schaltjahr!« ausgeben; ansonsten »0000 ist KEIN Schaltjahr« — mit dem eingegeben Jahr statt 0000.
+ */
+
+        let year = Number(prompt('Gib eine Jahreszahl ein.'))
+
+        if (year % 400 === 0) {
+            alert(`${year} ist ein Schaltjahr.`)
+        } else if (year % 100 === 0) {
+            alert(`${year} ist kein Schaltjahr.`)
+        } else if (year % 4 === 0) {
+            alert(`${year} ist ein Schaltjahr.`)
+        } else {
+            alert(`${year} ist kein Schaltjahr.`)
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

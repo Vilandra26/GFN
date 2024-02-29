@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+/* Du möchtst ein digitales Rezeptbuch schreiben, und die Zutaten für das jeweilige Rezept stellst du in einem Array zur Verfügung.
+
+1. Lege für das erste Rezept — Haferflocken-Kekse — ein Array mit den folgenden Zutaten an:
+*/
+
+        let zutaten = [
+            "70 ml Rapsöl",
+            "1 getrenntes Ei",
+            "100 g Zucker",
+            "1 TL Backpulver"
+        ];
+
+
+/*
+2. Da in der Liste das Mehl fehlt, musst du 1 EL Mehl noch nachträglich ergänzen.
+*/
+
+        zutaten.push("1 EL Mehl");
+
+
+/*
+3. Beim Durchlesen der Liste fällt auf, dass die wohl wichtigste Zutat ebenfalls fehlt. Füge noch 100 g Haferflocken an die erste Position in die Zutatenliste ein.
+*/
+
+        zutaten.unshift("100 g Haferflocken");
+
+/*
+4. Für Kekse ist es eigentlich besser, Butter statt Öl zu verwenden. Tausche das Öl in der Liste dementsprechend gegen 75 g Butter aus.
+*/
+
+        let oelIndex = zutaten.indexOf("70 ml Rapsöl");
+        if (oelIndex !== -1) {
+            zutaten[oelIndex] = "75 g Butter";
+        }
+
+/*
+5. Wandle das Array nun in einen String um und speichere diesen in einer Variablen. Dabei sollen die Zutaten als Liste ausgegeben werden.
+*/
+
+        let zutatenListe = zutaten.join("\n");
+
+/*
+6. Und damit die Rezeptspielerei nicht total sinnlos war, bekommst du natürlich noch die Anleitung von uns dazu. Speichere auch diese in einer Variable und gib das komplette Rezept in der Konsole aus.
+
+Anleitung:
+
+Schmelzen Sie die Butter in einer Pfanne, geben Sie die Haferflocken dazu und vermischen Sie alles gut miteinander.
+
+Nehmen Sie die Masse danach vom Herd und lassen Sie sie etwas auskühlen. Nun schlagen Sie das Eiweiß mit Zucker steif und rühren Eigelb, Backpulver und Mehl unter. Vermengen Sie nun die Masse mit den abgekühlten Haferflocken.
+
+Setzen Sie kleine Teighäufchen auf ein Backblech. Die Häufchen sollten nicht zu groß sein, da der Teig beim Backen etwas auseinanderläuft. Im vorgeheizten Backofen bei 170 °C 15 Minuten backen.
+ */
+
+        let anleitung = `Schmelzen Sie die Butter in einer Pfanne, geben Sie die Haferflocken dazu und vermischen Sie alles gut miteinander.
+
+        Nehmen Sie die Masse danach vom Herd und lassen Sie sie etwas auskühlen. Nun schlagen Sie das Eiweiß mit Zucker steif und rühren Eigelb, Backpulver und Mehl unter. Vermengen Sie nun die Masse mit den abgekühlten Haferflocken.
+
+        Setzen Sie kleine Teighäufchen auf ein Backblech. Die Häufchen sollten nicht zu groß sein, da der Teig beim Backen etwas auseinanderläuft. Im vorgeheizten Backofen bei 170 °C 15 Minuten backen.`;
+
+        // Gib das komplette Rezept aus
+        console.log("Zutaten:\n" + zutatenListe + "\n\nAnleitung:\n" + anleitung);
+
+
+    </script>
+
+</body>
+</html>

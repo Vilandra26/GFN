@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+/*      Heute schreibst du ein kleines Motivations-Tool für Menschen, die ein bisschen abnehmen möchten.
+ */
+/*      Frage den Anwender zuerst nach seinem gestrigen und dann nach seinem heutigen Gewicht und speicher die Antworten jeweils in einer Variable.
+ */
+
+        let userweightYesterday = prompt('How much did you weigh yesterday?');
+        let userweightToday = prompt('How much are you weighing today?');
+        let weightreduction = Math.round(100 - (userweightToday * 100 / userweightYesterday));
+
+ /*      Für den Fall, dass das heutige Gewicht geringer ist als das gestrige, berechnest du die Verringerung in Prozent und gibst eine begeisterte Gratulation unter Angabe der Gewichtsreduktion in ganzen Prozent aus. Vielleicht fällt dir ja auch eine kleine Belohnung für den Anwender ein …
+ */
+ 
+ /*      Für den Fall, dass das heutige Gewicht höher ist als das gestrige, rechnest du auch diese Veränderung in Prozent um und gibst unter Angabe der Gewichtszulage in Prozent eine mahnende Nachricht aus. Vielleicht mit der Aufforderung zu einer Aktivität?
+ */
+
+/*      Für den Fall, dass das Gewicht identisch ist, feuerst du den Anwender an, sich ein bisschen mehr zu bemühen und dranzubleiben.
+ */
+
+        if (userweightToday < userweightYesterday) {
+        alert(`Oh wow! Today you are weighing ${weightreduction}% less than yesterday.`);
+        } else {
+        if (userweightToday > userweightYesterday) {
+            alert('Always remember: Muscles are heavier than fat.');
+        } else {
+            alert('Same same.');
+        }
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+/* Nach so viel trockener Theorie hast du Durst. Du öffnest deinen Kühlschrank und siehst eine angebrochene Packung Maracujasaft, die dringend verbraucht werden muss. Mit Maracujasaft lassen sich tatsächlich tolle Cocktails zaubern, und gerade letztens hat dir ein Freund den Honolulu Flip empfohlen. Jetzt wäre es perfekt, wenn in dem besagten Cocktail Maracujasaft enthalten wäre …
+
+1. Schreibe eine Funktion, hasIngredient, die true zurückgibt, wenn eine angegebene Zutat in einer Rezeptliste vorhanden ist. Rufe deine Funktion mit Maracujsasaft und Honolulu Flip auf.
+
+2. So richtig sinnvoll ist unsere Funktion noch nicht. Viel hilfreicher wäre es, wenn wir eine Funktion hätten, die anhand unserer vorhandenen Zutaten herausfindet, ob wir den Cocktail auch tatsächlich machen können. Dafür benötigst du die komplette Liste aller bei dir vorhandenen Zutaten (ingredientsFromMyBar). Du möchtest wissen, ob du alle Zutaten vorrätig hast, die du zum Mixen des Cocktails benötigst.
+
+Hinweis: Verwende die Array-Funktion every. Auf hasIngredient aus der letzten Teilübung kannst du zurückgreifen.
+*/
+
+        let isMixableWith = (cocktailRecipe, availableIngredients) => cocktailRecipe.every(ingredient => hasIngredient(availableIngredients, ingredient));
+
+        let hasIngredient = (listOfIngredients, searchedIngredient) => listOfIngredients.includes(searchedIngredient);
+
+        let honoluluFlip = [
+        'Maracuja Juice',
+        'Pineapple Juice',
+        'Lemon Juice',
+        'Grapefruit Juice',
+        'Crushed Ice'
+        ];
+        let ingredientsFromMyBar = [
+        'Pineapple',
+        'Maracuja Juice',
+        'Cream',
+        'Lemon Juice',
+        'Grapefruit Juice',
+        'Crushed Ice',
+        'Milk',
+        'Apple Juice',
+        'Aperol',
+        'Pineapple Juice',
+        'Limes',
+        'Lemons'
+        ];
+
+        console.log(isMixableWith(honoluluFlip, ingredientsFromMyBar)); 
+
+    </script>
+</body>
+</html>

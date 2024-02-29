@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+/* Im Zuge der Neustrukturierung deines Unternehmens möchtest du den derzeitigen Domainnamen von 1,2,3 Schmidt auf hansonline ändern. Die Domain lautet www.123schmidt.de. Dabei musst du jedoch die vollständige URL mit Protokoll und Pfad berücksichtigen. Die beiden zu ändernden URLs lauten: https://www.123schmidt.de/shop und https://www.123schmidt.de/bewertungen. Die neuen URLs sollen https://www.hansonline.de/shop und https://www.hansonline.de/bewertungen heißen. Da du die URLs in langen Texten mehrfach verwendest, hast du natürlich keine Lust, jede URL von Hand anzupassen. Reguläre Ausdrücke bewahren dich davor.
+
+Nutze die dir bekannten Stringfunktionen im Zusammenhang mit regulären Ausdrücken, um die Domainnamen umzubenennen.
+
+Du erhältst die URLs bereits in einer gleichnamigen Variable. In dieser sollen sich die aktualisierten URLs auch wieder befinden.
+ */
+
+
+        let url = 'https://www.123schmidt.de/shop, https://www.123schmidt.de/bewertungen';
+
+        // Regulärer Ausdruck, der die alte Domain findet
+        const regex = /www\.123schmidt\.de/g;
+
+        // Ersetzt die alte Domain durch die neue
+        url = url.replace(regex, 'www.hansonline.de');
+
+        console.log(url);
+
+
+</script>
+</body>
+</html>

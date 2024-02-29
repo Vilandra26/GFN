@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+/* Ferdinand Füller ist nun noch wählerischer geworden. Filtere nur die Spiele aus der angegebenen Liste heraus, bei denen alle Wörter mit dem Buchstaben F beginnen und die aus mindestens zwei Wörtern bestehen — also z. B. Fearsome Floors, aber nicht Fauna oder Black Friday.
+*/
+
+        let isFerdinandsBoardgame = game => {
+            let words = game.split(' ');
+            if (words.length < 2) return false;
+            return words.every(word => word.startsWith('F'));
+        };
+
+        let boardgames = [
+        'Caverna',
+        'Puerto Rico',
+        'Agricola',
+        'Black Friday',
+        'Funny Friends',
+        'Fauna',
+        'Eclipse',
+        'Codenames',
+        'Dominion',
+        'Fairy Tale',
+        'Fast Flowing Forest Fellers',
+        'Fearsome Floors'
+        ];
+
+        let ferdinandsBoardgames = boardgames.filter(isFerdinandsBoardgame);
+
+        console.log(ferdinandsBoardgames);
+
+
+    </script>
+</body>
+</html>

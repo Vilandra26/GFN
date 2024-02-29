@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+/*      Programmiere nun Stück für Stück ein kleines Quiz, in dem ein Spieler Fragen zu JS beantworten muss und damit gegen Fehler und schlechten Code — also die dunkle Seite von JS — antritt. Möge der Source mit dir sein!
+
+Als ersten Schritt fragst du den Spieler nach seinem Namen, speicherst diesen in eine Variable und begrüßt ihn mittels einer Alert-Box. Ergänze den folgenden Code:
+*/
+
+        let username = prompt('Hello! What\'s your name?');
+        alert(`Welcome to our little quiz, ${username}.`);
+
+/*      Stelle dem Spieler die Frage, ob er sich fit genug fühlt, um gegen das dunkle JavaScript anzutreten. Es ist sinnvoll, bei der Frage die Antwortmöglichkeiten anzugeben. Die Antwort speicherst du in einer neuen Variable und erstellst als Nächstes eine if-Verzweigung. Der Rumpf des if soll nur ausgewertet werden, wenn der Spieler bestätigt, dass er sich stark genug fühlt, das Spiel zu beginnen. In den Rumpf schreiben wir ein alert, das den Spielstart bestätigt und den Spieler anfeuert.
+*/
+
+        let playerReady = prompt('Are you ready to face the Dark Side of JavaScript?');
+        if (playerReady === 'yes') {
+              alert('Awesome! Let\'s start!');
+              let firstFight = prompt('Which Operator has the higher priority: * or + ?');
+              if (firstFight === '*') {
+                alert('God job!');
+              }
+              if (firstFight === '?') {
+                alert('Fail!');
+              }
+              else {
+                alert('Assignment not understood.')
+              }
+            }
+
+
+/*      Für den Fall, dass der Spieler zu feige ist und einen mangelnden Fitness-Grad angegeben hat, schreibst du eine weitere if-Verzweigung, die den Fall abfängt und den Spieler mit Schimpf und Schande verabschiedet. Natürlich darfst du auch freundlich bleiben — ganz wie du magst.
+*/
+
+        if (playerReady.toLowerCase() === 'no') {
+              alert('We\'re all doomed!');
+            }
+            else {
+                alert('Please answer with yes or no.')
+            }
+
+
+/*      Nun kann es losgehen. Stelle den Spieler vor seine erste Aufgabe. Deklariere nach dem alert eine neue Variable, in der du die Antwort des Spielers zu folgender Frage speicherst:
+»Which Operator has the higher priority: * or + ?«
+
+Um auf die Antwort reagieren zu können, schreibe eine weitere if-Verzweigung, deren Rumpf nur ausgewertet wird, wenn die Antwort stimmt.
+*/
+        
+/*      alert gratuliert hier zur korrekten Antwort. Wenn du magst, kannst du noch weitere Verzweigungen mit Fragen einbauen.
+*/
+
+
+/*      Füge ein weiteres if für die Variante ein, in der der Spieler eine falsche Antwort gibt. 
+*/
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

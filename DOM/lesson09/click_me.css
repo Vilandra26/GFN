@@ -1,0 +1,31 @@
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: auto;
+    padding: 15px 40px;
+    color: white;
+    font-size: 16px;
+    line-height: 16px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    margin: 10px;
+}
+
+#btn1 {
+    background-color: #000077;
+
+}
+#btn2 {
+    background-color: #ff0000;
+}
+#btn3 {
+    background-color: #1c7700;
+}

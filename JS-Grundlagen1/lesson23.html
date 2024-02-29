@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+/* Endlich setzt du deinen Kampf gegen die dunkle Seite von JS fort (siehe Übung 20) und erstellst zwei neue »Kampf-Sequenzen«:
+»What's the German word for if« (Mehrere Lösungsmöglichkeiten: wenn, falls).
+»Now, please enter a string with a length between 8 and 15 characters …« */
+
+
+        let username = prompt('Hello! What\'s your name?');
+        alert(`Welcome to our little quiz, ${username}.`);
+
+        let playerReady = prompt('Are you ready to face the Dark Side of JavaScript?');
+        if (playerReady === 'yes') {
+            alert('Awesome! Let\'s start!');
+            let fightOne = prompt('Which Operator has the higher priority: * or + ?');
+            if (fightOne === '*') {
+                let fightTwo = prompt('Good job! On to the next round! \n What\'s the German word for "if"?')
+                if (fightTwo === 'wenn' || fightTwo === 'falls') {
+                    let fightThree = prompt('Awesome! Now please enter a string with a length between 8 and 15 characters.')
+                    if (fightThree.length >= 8 && fightThree.length <= 15) {
+                        alert('You did it! You triumphed heroically over the dark side of JS!')
+                    } else {
+                        alert('Oops! Try again!');
+                    }
+                } else {
+                    alert('That\'s a pity...')
+                }
+            } else {
+                alert('Fail! Such tragedy.');
+            }
+        } else {
+            alert('We\'re all doomed!')
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

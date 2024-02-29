@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    'use strict'
+
+
+/* Verschaffe deinem Schaltjahr-Tool aus Lektion 10 ein Facelifting. Mithilfe der logischen Operatoren kannst du einige else einsparen und den Code einfacher, kürzer und übersichtlicher gestalten. */
+
+
+    let year = Number(prompt('Gib eine Jahreszahl ein.'))
+
+    if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
+        console.log(`${year} ist ein Schaltjahr.`)
+    } else {
+        console.log(`${year} ist kein Schaltjahr.`)
+    }
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

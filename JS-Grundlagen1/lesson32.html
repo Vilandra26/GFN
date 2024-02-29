@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+/* Schreibe einen Passwortprüfer. Der Nutzer soll aufgefordert werden, ein Passwort einzugeben. Das eingegebene Passwort soll dann durch einen regulären Ausdruck überprüft werden. Zuletzt soll der Nutzer darauf hingewiesen werden, ob sein Passwort den Anforderungen entspricht oder nicht. Das Passwort muss mindestens ein Zeichen aus jeder der folgenden Gruppen enthalten:
+
+Zahlen
+Kleinbuchstaben
+Großbuchstaben
+Sonderzeichen: $, @, %, !
+4–20 Zeichen
+
+Alle anderen Zeichen sind untersagt.
+ */
+
+        // Aufforderung zur Passworteingabe
+        const password = prompt("Bitte geben Sie Ihr Passwort ein:");
+
+        // Regulärer Ausdruck zur Überprüfung des Passworts
+        const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$@%!]).{4,20}$/;
+
+        // Überprüfung des Passworts
+        if(passwordRegex.test(password)) {
+            alert("Ihr Passwort entspricht den Anforderungen.");
+        } else {
+            alert("Ihr Passwort entspricht NICHT den Anforderungen. Bitte stellen Sie sicher, dass Ihr Passwort mindestens ein Zeichen aus jeder der folgenden Gruppen enthält: Zahlen, Kleinbuchstaben, Großbuchstaben, Sonderzeichen ($, @, %, !) und zwischen 4 bis 20 Zeichen lang ist.");
+        }
+
+    </script>
+</body>
+</html>

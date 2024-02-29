@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    'use strict'
+
+/* Gib die Ergebnisse des Zeitrechners (Übung 3) abgerundet (ohne Nachkommastellen) in folgender Form aus:
+mm:ss
+*/
+
+/* Wie viele Minuten und Restsekunden haben 2000 Sekunden? Verwende console.log für die Ausgabe.
+
+Hinweise: Am einfachsten ist die Aufgabe mithilfe des Modulo-Operators zu lösen. Nachkommastellen kannst du im Moment noch nicht entfernen. Darauf kommen wir später zurück.
+*/
+
+    let second = 2000;
+    let mm = Math.floor(second / 60);
+    let ss = Math.floor(second % 60);
+
+    console.log(`${second} Sekunden bestehen aus ` + mm + ':' + ss + ' mm:ss.')
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

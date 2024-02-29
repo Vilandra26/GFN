@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+/* Das ist garantiert der letzte Lückentext für diese Lektion. Ersetze wieder die Kommentare durch den richtigen Code, um das angegebene Ergebnis zu erzielen.
+*/
+
+        let result;
+        let inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let text = 'Hi this is a short text';
+        let names = ['Heribert', 'Friedlinde', 'Tusnelda', 'Oswine', 'Ladislaus'];
+
+        //odd numbers
+        result = inputs.filter(x => x % 2 !== 0);
+        console.log(result); 
+
+        //sum
+        result = inputs.reduce((acc, x) => acc + x, 0);
+        console.log(result); 
+
+        //product
+        result = inputs.reduce((acc, x) => acc * x, 1);
+        console.log(result); 
+
+        //longest word length
+        result = text.split(' ').reduce((max, word) => Math.max(max, word.length), 0);
+        console.log(result); 
+
+        //longest word
+        result = text.split(' ').reduce((longest, word) => word.length > longest.length ? word : longest, '');
+        console.log(result); 
+
+        //avg word length
+        result = text.split(' ').reduce((total, word) => total + word.length, 0) / text.split(' ').length;
+        console.log(result); 
+
+        //sort by 3rd letter
+        result = names.sort((a, b) => a.charAt(2).localeCompare(b.charAt(2)));
+        console.log(result); 
+
+        // more than 8 letters
+        result = names.some(name => name.length > 8);
+        console.log(result); 
+
+        // at least 8 letters
+        result = names.every(name => name.length >= 8);
+        console.log(result); 
+
+        // lowest value
+        result = Math.min(...inputs);
+        console.log(result); 
+
+
+    </script>
+</body>
+</html>

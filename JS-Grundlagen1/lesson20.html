@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        'use strict'
+/* Für dein Spiel ist else ebenfalls hilfreich. Zum Beispiel bei der Frage, ob der Spieler bereit zum Spielen ist. Statt hier ein zweites if einzubauen, kannst du else verwenden.
+
+Ersetze die if-Anweisungen an den richtigen Stellen durch ein else:
+ */
+/*
+      ​
+        let playerFitness = …
+        ​
+        if (…) {
+        let fightOne = prompt(…
+        if (…) {
+            alert(…
+        } else {
+            alert(…
+        }
+        } else {
+        alert(…)
+        }   
+*/
+
+        let username = prompt('Hello! What\'s your name?');
+        alert(`Welcome to our little quiz, ${username}.`);
+
+        let playerReady = prompt('Are you ready to face the Dark Side of JavaScript?');
+        if (playerReady === 'yes') {
+              alert('Awesome! Let\'s start!');
+              let firstFight = prompt('Which Operator has the higher priority: * or + ?');
+              if (firstFight === '*') {
+                alert('God job!');
+              }
+              else {
+                alert('Fail!');
+              }
+            }
+            else {
+                alert('We\'re all doomed!')
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

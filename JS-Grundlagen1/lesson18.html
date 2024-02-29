@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    'use strict'
+
+/* Runde die Ausgaben von Übung 15 (Teil 1 der Übung) kaufmännisch (d. h. ab 0.5 aufrunden).
+*/
+
+        let strecke = prompt('Wieviele Kilometer hast du zurückgelegt?');
+        let gesamtVerbrauch = prompt('Wieviel Benzin hast du verbraucht?');
+        let Verbrauch = Math.round(gesamtVerbrauch / strecke * 100);
+     
+        console.log(`Dein Auto verbraucht ${Verbrauch} Liter auf 100 Kilometer.`)
+
+        let tankVolumen = prompt('Wieviele Liter Benzin passen insgesamt in den Tank deines Fahrzeugs?');
+        let Reichweite = Math.round(tankVolumen * 100 / Verbrauch);
+        console.log(`Du kannst insgesamt ${Reichweite} km mit einer Tankfüllung fahren.`)
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

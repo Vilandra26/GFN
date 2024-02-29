@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+/* Ändere den Code aus Übung 36. Die Funktion soll den transformierten Namen nun nicht mehr direkt ausgeben, sondern diesen zurückgeben. Das Ausgabeformat bleibt unverändert:
+
+Rufe die Funktion anschließend innerhalb von console.log auf:
+
+Hinweis: Vergiss nicht, die Funktion umzubenennen, da sie das Logging nicht mehr selbst ausführt.
+ */
+
+
+        function transformName(firstName, lastName) {
+            // Extrahiere den Anfangsbuchstaben des Vornamens
+            const initial = firstName.charAt(0);
+
+            // Erstelle den formatierten String
+            const transformedName = `${lastName}, ${initial}.`;
+
+            // Gib den formatierten String zurück statt ihn auszugeben
+            return transformedName;
+        }
+
+        // Rufe die Funktion innerhalb von console.log auf
+        console.log(transformName('Ladislaus', 'Jones')); // => 'Jones, L.'
+
+
+
+
+    </script>
+
+</body>
+</html>
